@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root{
+    --borderColor:rgba(255,255,255,0.04);
+    --navHeight:15vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, a{
+    background-color: rgb(5,10,15);
+    color: white;
+}
+
+/* NAV BAR SECTION */
+
+nav{
+    height: var(--navHeight);
+    border-bottom: 1px solid var(--borderColor);
+    display: grid;
+    grid-template:1fr / 2fr 2fr 1fr 1fr;
+}
+
+.nav__section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--borderColor) ;
+}
+
+.nav__section:nth-child(1){
+    justify-content: flex-start;
+    padding: 0 3rem;
+}
+
+.nav__section:nth-child(2){
+    justify-content: space-around;
+    padding: 0 3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* MAIN SECTION */
+
+main{
+    width: 100%;
+    height: calc(100vh - var(--navHeight));
+
+    display: grid;
+    grid-template-rows:2fr 1fr;
+}
+
+/* PRIMERA ROW */
+
+.row:nth-child(1){
+    display: grid;
+    border-bottom: 1px solid var(--borderColor);
+    grid-template-columns: 2fr 1fr;
+}
+
+.row:nth-child(1) > .box:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row:nth-child(1) .box:nth-child(2){
+    border-left: 1px solid var(--borderColor);
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+/* CUBITOS A LA DERECHA  */
+
+.cubito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cubito:nth-child(1) , .cubito:nth-child(2){
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.cubito:nth-child(even){
+    border-left: 1px solid var(--borderColor) ;
+}
+
+/* SEGUNDO ROW */
+
+.row:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.row:nth-child(2) > .box{
+    border-left: 1px solid var(--borderColor) ;
+}
+
