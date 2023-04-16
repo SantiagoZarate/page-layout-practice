@@ -71,6 +71,38 @@ main{
     align-items: center;
 }
 
+/* IMAGEN */
+
+.box__img{
+    width: 90%;
+    height: 90%;
+    background: url(../assets/Museum.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+    border-radius: 15px;
+    background-position: top;
+    transition: background-position 500ms, background-size 500ms;
+    position: relative;
+}
+
+.box__img:hover{
+    background-position: bottom;
+    background-size: 110%;
+}
+
+.box__img::after{
+    content: "";
+    width: 30%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(20,20,20,0);
+    border-radius: inherit;
+    box-shadow: 10px -10px 60px rgb(5,10,15, 0.5);
+    backdrop-filter:blur(5px) ;
+}
+
 .row:nth-child(1) .box:nth-child(2){
     border-left: 1px solid var(--borderColor);
     display: grid;
@@ -91,6 +123,7 @@ main{
 
 .cubito:nth-child(even){
     border-left: 1px solid var(--borderColor) ;
+    /* border-right: 1px solid var(--borderColor); */
 }
 
 /* SEGUNDO ROW */
@@ -100,7 +133,16 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.row:nth-child(2) > .box{
-    border-left: 1px solid var(--borderColor) ;
+.row:nth-child(2) > .box:nth-child(2){
+    border-left: 1px solid var(--borderColor);
+    border-right: 1px solid var(--borderColor);
 }
 
+@media only screen and (min-width: 1000px){
+    main{
+        width: 80%;
+        margin: 0 auto;
+        border-left: 1px solid var(--borderColor);
+        border-right: 1px solid var(--borderColor);
+    }
+}
