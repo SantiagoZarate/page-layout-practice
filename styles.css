@@ -76,7 +76,7 @@ main{
 .box__img{
     width: 90%;
     height: 90%;
-    background: url(../assets/Museum.jpg);
+    background: url(assets/Museum.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100%;
